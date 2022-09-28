@@ -1,5 +1,6 @@
-[include]
-path = .gitconfig.local
+[user]
+    name = Nathan Braid
+    email = nbraid@gmail.com
 
 [color]
 ui = auto
@@ -33,4 +34,4 @@ lol = log --graph --decorate --pretty=oneline --abbrev-commit
 lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
 [includeIf "gitdir:~/stripe/"]
-    path = ~/.gitconfig-stripe
+    path = ~/.gitconfig.stripe
