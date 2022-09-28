@@ -1,1 +1,36 @@
-/home/nathan/.fresh/build/gitconfig
+[include]
+path = .gitconfig.local
+
+[color]
+ui = auto
+branch = auto
+diff = auto
+interactive = auto
+status = auto
+
+[init]
+defaultBranch = main
+
+[core]
+excludesfile = ~/.gitignore
+
+[push]
+default = tracking
+
+[merge]
+log = true
+conflictstyle = diff3
+
+[diff]
+compactionHeuristic = true
+
+[rebase]
+autosquash = true
+autostash = true
+
+[alias]
+lol = log --graph --decorate --pretty=oneline --abbrev-commit
+lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+[includeIf "gitdir:~/stripe/"]
+    path = ~/.gitconfig-stripe
