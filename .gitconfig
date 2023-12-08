@@ -1,6 +1,6 @@
 [user]
-    name = Nathan Braid
-    email = nbraid@gmail.com
+name = Nathan Braid
+email = nbraid@gmail.com
 
 [color]
 ui = auto
@@ -32,6 +32,3 @@ autostash = true
 [alias]
 lol = log --graph --decorate --pretty=oneline --abbrev-commit
 lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-
-[includeIf "gitdir:~/stripe/"]
-    path = ~/.gitconfig.stripe
