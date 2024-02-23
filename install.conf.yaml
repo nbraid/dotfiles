@@ -1,17 +1,26 @@
 - defaults:
     link:
+      create: true
+      force: true
       relink: true
+
 
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+    ~/.config/fish/conf.d:
+      path: fish/conf.d/*.fish
+      glob: true
+    ~/.config/fish/functions:
+      path: fish/functions/*.fish
+      glob: true
+    ~/.config/fish/completions:
+      path: fish/completions/*.fish
+      glob: true
 
-- create:
-    - ~/downloads
-    - ~/.vim/undo-history
+    ~/.gitconfig: .gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
