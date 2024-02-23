@@ -4,8 +4,7 @@
       force: true
       relink: true
 
-
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.config/fish/config.fish: fish/config.fish
@@ -20,7 +19,14 @@
       path: fish/completions/*.fish
       glob: true
 
+    ~/.Brewfile: Brewfile
     ~/.gitconfig: .gitconfig
 
+- install-brew: true
+
+- brewfile:
+    - Brewfile
+
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [./install_scripts/install_fisher.fish, Installing fisher]
