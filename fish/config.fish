@@ -4,3 +4,6 @@ if status is-interactive
     set -U fish_greeting
 
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
