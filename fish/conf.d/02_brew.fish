@@ -6,4 +6,4 @@ for homebrew_dir in /opt/homebrew /home/linuxbrew/.linuxbrew $HOME/homebrew;
     end
 end
 
-set HOMEBREW_BUNDLE_FILE $HOME/.Brewfile
+set HOMEBREW_BUNDLE_FILE $HOME/Brewfile

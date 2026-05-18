@@ -19,13 +19,13 @@
       path: fish/completions/*.fish
       glob: true
 
-    ~/.Brewfile: Brewfile
+    ~/Brewfile: Brewfile
     ~/.gitconfig: .gitconfig
     ~/.tool-versions: tool-versions
 
 
 - shell:
-    - [brew bundle --verbose --file=Brewfile, Installing from Brewfile]
+    - [brew bundle --verbose --file=~/Brewfile, Installing from Brewfile]
 
 - asdf:
     - plugin: java
