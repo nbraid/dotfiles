@@ -1,3 +1,4 @@
+tap "deskflow/tap"
 brew "asdf"
 brew "bat"
 brew "fd"
