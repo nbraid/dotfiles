@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 brew "asdf"
 brew "bat"
 brew "fd"
