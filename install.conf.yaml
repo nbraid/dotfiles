@@ -21,11 +21,11 @@
 
     ~/.Brewfile: Brewfile
     ~/.gitconfig: .gitconfig
+    ~/.tool-versions: tool-versions
 
-- install-brew: true
 
-- brewfile:
-    - Brewfile
+- shell:
+    - [brew bundle --verbose --file=Brewfile, Installing from Brewfile]
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
