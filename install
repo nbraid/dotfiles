@@ -13,8 +13,15 @@ git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
 # Install Homebrew if missing, then ensure it's in PATH for this process
-# (dotbot-brew's install-brew directive has a bug where it crashes on fresh machines)
-if ! command -v brew >/dev/null 2>&1; then
+_brew_installed() {
+    command -v brew >/dev/null 2>&1 && return 0
+    for homebrew_prefix in /opt/homebrew /home/linuxbrew/.linuxbrew "${HOME}/homebrew" /usr/local; do
+        [ -x "${homebrew_prefix}/bin/brew" ] && return 0
+    done
+    return 1
+}
+
+if ! _brew_installed; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 for homebrew_prefix in /opt/homebrew /home/linuxbrew/.linuxbrew "${HOME}/homebrew" /usr/local; do
