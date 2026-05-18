@@ -27,6 +27,17 @@
 - shell:
     - [brew bundle --verbose --file=Brewfile, Installing from Brewfile]
 
+- asdf:
+    - plugin: java
+      url: https://github.com/halcyon/asdf-java.git
+    - plugin: maven
+      url: https://github.com/halcyon/asdf-maven.git
+    - plugin: nodejs
+      url: https://github.com/asdf-vm/asdf-nodejs.git
+
+- shell:
+    - [asdf install, Installing asdf tool versions]
+
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [./install_scripts/install_fisher.fish, Installing fisher]

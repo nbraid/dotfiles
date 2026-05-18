@@ -24,4 +24,4 @@ for homebrew_prefix in /opt/homebrew /home/linuxbrew/.linuxbrew "${HOME}/homebre
     fi
 done
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-asdf -c "${CONFIG}" "${@}"
